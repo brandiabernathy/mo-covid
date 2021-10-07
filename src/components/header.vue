@@ -4,21 +4,17 @@
 		<div>
 			<img src="../assets/missouri.png" />
 			<h1>MO COVID</h1>
-			<router-link to="/county">Navigate to Page2</router-link>
 		</div>
 	</header>
 </template>
+
+
 <script>
-
-
 export default {
 	name: 'Header',
-	data() {
-		return {
-		};
-	},
 }
 </script>
+
 <style scoped>
 	header {
 		height: 70px;

@@ -25,7 +25,6 @@ export default {
 		axios
 			.get('https://api.covidactnow.org/v2/state/MO.timeseries.json?apiKey=adec4b65084f4c4dbca7b8cbc350d509')
 			.then(res => {
-				// console.log('res', res.data);
 				this.state_dates = res.data.actualsTimeseries
 				.filter(day => day.cases != null)
 				.map(day => dayjs(day.date).format('MMM DD'));
@@ -34,8 +33,6 @@ export default {
 				.filter(day => day.cases != null)
 				.map(day => day.newCases);
 
-				// console.log('this.state_dates', this.state_dates);
-				// console.log('this.state_pos_tests', this.state_pos_tests);
 				this.renderChart({
 					labels: this.state_dates,
 					datasets: [

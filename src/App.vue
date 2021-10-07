@@ -1,16 +1,54 @@
 <template>
 	<div id="app">
-		<header>
-			<div class="left">
-				<router-link to="/">
-					<img src="./assets/missouri.png" />
-					<h1>MO COVID</h1>
-				</router-link>
-			</div>
-			<nav id="nav">
-				<router-link to="/about">About</router-link>
-			</nav>
-		</header>
-		<router-view/>
+		<header-nav />
+		<stats />
+		<div class="chart-container">
+			<state />
+		</div>
 	</div>
 </template>
+
+<script>
+import HeaderNav from './components/header.vue';
+import State from './components/state.vue';
+import Stats from './components/state-stats.vue';
+
+export default {
+	name: 'App',
+	components: {
+		HeaderNav,
+		State,
+		Stats,
+	}
+}
+</script>
+
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Lato:400,300|Oswald);
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600|Lato:400,300');
+	body {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+		background-color: #f6f6f6;
+	}
+	#app {
+		font-family: 'Montserrat';
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		color: #555;
+		padding-bottom: 40px;
+	}
+	.chart-container {
+		margin: 40px auto;
+		height: 400px;
+		width: 80vw;
+		background-color: #fff;
+		padding: 20px;
+		border-radius: 6px;
+		box-shadow: 0px 1px 2px rgba(67, 67, 67, 0.1) ;
+	}
+</style>
