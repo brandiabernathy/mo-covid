@@ -31,7 +31,7 @@ export default {
 	created() {
 		//adec4b65084f4c4dbca7b8cbc350d509
 		axios
-			.get('https://api.covidactnow.org/v2/state/MO.timeseries.json?apiKey=adec4b65084f4c4dbca7b8cbc350d509')
+			.get('https://api.covidactnow.org/v2/state/MO.timeseries.json?apiKey=' + process.env.VUE_APP_API_KEY)
 			.then(res => {
 				this.icu = res.data.actuals.icuBeds.currentUsageCovid;
 				this.hospitalized = this.number_with_commas(res.data.actuals.hospitalBeds.currentUsageCovid);

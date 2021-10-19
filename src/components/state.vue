@@ -23,7 +23,7 @@ export default {
 	},
 	created() {
 		axios
-			.get('https://api.covidactnow.org/v2/state/MO.timeseries.json?apiKey=adec4b65084f4c4dbca7b8cbc350d509')
+			.get('https://api.covidactnow.org/v2/state/MO.timeseries.json?apiKey=' + process.env.VUE_APP_API_KEY)
 			.then(res => {
 				this.state_dates = res.data.actualsTimeseries
 				.filter(day => day.cases != null)
