@@ -1,9 +1,9 @@
 
 <template>
 	<div class="wrapper">
-		<div class="stat"><div class="label">Percent fully vaccinated</div><div class="num">{{ percent_vaccinated }}%</div></div>
+		<div class="stat"><div class="label">Percent fully vaccinated</div><div class="num">{{ parseFloat(percent_vaccinated).toFixed(1) }}%</div></div>
 		<div class="stat"><div class="label">Total cases</div><div class="num">{{ total_cases }}</div></div>
-		<div class="stat"><div class="label">Positivity rate (past 7 days)</div><div class="num">{{ positivity_rate }}%</div></div>
+		<div class="stat"><div class="label">Positivity rate (past 7 days)</div><div class="num">{{ parseFloat(positivity_rate).toFixed(1) }}%</div></div>
 		<div class="stat"><div class="label">COVID patients hospitalized</div><div class="num">{{ hospitalized }}</div></div>
 		<div class="stat"><div class="label">COVID patients in ICU</div><div class="num">{{ icu }}</div></div>
 	</div>
