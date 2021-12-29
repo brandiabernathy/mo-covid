@@ -1,6 +1,6 @@
 # mo-covid
 
-Small app displaying some COVID stats for Missouri using COVID Act Now API
+Small app displaying some COVID stats for Missouri using COVID Act Now API. View at: http://brandiquintos.com/mo-covid/
 
 ![Alt text](/public/screenshot.jpg?raw=true "Screenshot")
 
