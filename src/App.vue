@@ -5,6 +5,9 @@
 		<div class="chart-container">
 			<state />
 		</div>
+		<footer>
+			Powered by <a href="https://covidactnow.org/"> COVID Act Now </a>
+		</footer>
 	</div>
 </template>
 
@@ -50,5 +53,12 @@ export default {
 		padding: 20px;
 		border-radius: 6px;
 		box-shadow: 0px 1px 2px rgba(67, 67, 67, 0.1) ;
+	}
+	footer {
+		text-align: center;
+		font-size: 12px;
+	}
+	a {
+		color: #308b9f;
 	}
 </style>
